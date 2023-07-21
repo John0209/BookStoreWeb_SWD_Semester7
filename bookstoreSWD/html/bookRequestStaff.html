@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+    <!-- Font awsome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Sweet Alert -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.min.css">
+
+    <link rel="stylesheet" href="/css/bookRequestAdmin.css">
+</head>
+
+<body>
+    <div class="container-fluid container-color">
+        <div class="row flex-nowrap">
+            <div class="col-auto col-md-3 col-xl-2 px-sm-2 px-0 primary-ad rounded-ad">
+                <div class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white min-vh-100">
+                    <a href="/"
+                        class="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+                        <img src="https://png.pngtree.com/template/20190316/ourmid/pngtree-books-logo-image_79143.jpg"
+                            style="width: 50px; height: 50px" />
+                    </a>
+                    <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start"
+                        id="menu">
+                        <li class="nav-item">
+                            <a href="/html/productlist.html" class="nav-link align-middle px-0">
+                                <i class="fa-solid fa-list cl-text-sb"></i>
+                                <span class="ms-1 d-none d-sm-inline cl-text-sb">Product List</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/html/importation.html" class="nav-link px-0 align-middle">
+                                <i class="fa-sharp fa-solid fa-file-import cl-text-sb"></i>
+                                <span class="ms-1 d-none d-sm-inline cl-text-sb">Importation</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/html/inventory.html" class="nav-link px-0 align-middle cl-text-sb">
+                                <i class="fa-solid fa-warehouse"></i>
+                                <span class="ms-1 d-none d-sm-inline cl-text-sb">Inventory</span>
+                            </a>
+                        </li>
+                        <li class="main nav-item">
+                            <a href="#" id="staff" class="nav-link px-0 align-middle">
+                                <i class="fa-regular fa-clipboard cl-text-sb"></i>
+                                <span class="ms-1 d-none d-sm-inline cl-text-sb">Book Request</span>
+                            </a>
+                        </li>
+                        <li id="disable" class="disable nav-item" style="position: relative;">
+                            <a href="/html/userlist.html" class="nav-link px-0 align-middle">
+                                <i class="fa-solid fa-user"></i>
+                                <span class="ms-1 d-none d-sm-inline cl-text-sb">User List</span>
+                            </a>
+                            <div id="censored"
+                                style="position: absolute; top: 0; right: 0; bottom: 0; left: 0; background-color: black; opacity: 0.3; border-radius: 10px;">
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/html/orderlist.html" class="nav-link px-0 align-middle">
+                                <i class="fa-regular fa-clipboard cl-text-sb"></i>
+                                <span class="ms-1 d-none d-sm-inline cl-text-sb">Order List</span>
+                            </a>
+                        </li>
+                    </ul>
+                    <hr />
+                    <div class="admin pb-4">
+                        <a href="login.html" class="nav-link px-0 align-middle cl-text-sb">
+                            <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                            <span class="ms-1 d-none d-sm-inline cl-text-sb">Log out</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col" style="padding-bottom: 0!important;">
+                <div class="container">
+                    <div class="d-flex">
+                        <h3 class="mt-4 cl-text-ad mb-3">Book Request</h3>
+                        <button type="button" class="addBook" onclick="tickInvent()">
+                            <i class="fa-solid fa-plus"></i> Add to importation
+                        </button>
+                    </div>
+                    <div class="cl-bg-ad rounded-bg max-vh-100">
+                        <div class="p-4" style="overflow: hidden;">
+                            <div style="overflow: hidden; overflow-y: scroll; height: 600px;">
+                                <table class="table table-hover mt-4" id="book-table">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">#</th>
+                                            <th scope="col">Image</th>
+                                            <th scope="col">Title</th>
+                                            <th scope="col">Quantity</th>
+                                            <th scope="col">Price</th>
+                                            <th scope="col">Note</th>
+                                            <th scope="col">Date</th>
+                                            <th scope="col">Date Completed</th>
+                                            <th scope="col">Status</th>
+                                            <th scope="col" colspan="2">Action</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="book-table-body">
+                                        <!-- Dữ liệu từ API GET_BOOK sẽ được hiển thị ở đây -->
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- The Modal1 -->
+    <div class="modal fade" id="myModal1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header" style="background-color: #fbebb5; text-align: center;">
+                    <h3 style="margin-top: 20px; width: 100%;">Create book</h3>
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <div class="tab-content" id="pills-tabContent">
+                        <div class="tab-pane fade show active" id="newBook" role="tabpanel"
+                            aria-labelledby="pills-project-tab">
+                            <div>
+                                <div class="appearBook">
+                                    <div class="item d-flex">
+                                        <i class="fa-solid fa-book"></i>
+                                        <p id="bookName"></p>
+                                    </div>
+                                    <div class="item d-flex">
+                                        <i class="fa-solid fa-user-tie"></i>
+                                        <input type="text" id="author" placeholder="Author">
+                                    </div>
+                                    <div class="item d-flex">
+                                        <i class="fa-solid fa-list-ol"></i>
+                                        <p id="quantity"></p>
+                                    </div>
+                                    <div class="item d-flex">
+                                        <i class="fa-regular fa-money-bill-1"></i>
+                                        <p id="money"></p>
+                                    </div>
+                                    <div class="item d-flex">
+                                        <i class="fa-solid fa-arrow-down-wide-short"></i>
+                                        <p id="cate"></p>
+                                    </div>
+                                    <div class="item d-flex">
+                                        <i class="fa-regular fa-calendar-days"></i>
+                                        <p id="date"></p>
+                                    </div>
+                                    <div class="item d-flex">
+                                        <i class="fa-regular fa-clipboard"></i>
+                                        <p id="note"></p>
+                                    </div>
+
+                                </div>
+
+                                <div class="d-flex" style="margin-top: 30px; margin-left: 280px;">
+                                    <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
+                                    <button onclick="createBook()" class="btn btn-primary"
+                                        style="margin-left: 20px;">Add</button>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- The Modal2 -->
+    <div class="modal fade" id="myModal2">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <h3>Are you sure you want to delete?</h3>
+                    <div class="d-flex" style="margin-left: 300px; margin-top: 50px;">
+                        <button type="button" data-dismiss="modal" style="margin-right: 20px;">Cancel</button>
+                        <button onclick="deleteRequest()" class="btn btn-danger" data-dismiss="modal">Delete</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- The Modal3 -->
+    <div class="modal fade" id="myModal3">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <h3>Why do you want to cancel the request?</h3>
+                    <textarea id="noteRequest" cols="40" rows="10"></textarea>
+
+                    <div class="d-flex" style="margin-left: 300px; margin-top: 50px;">
+                        <button type="button" data-dismiss="modal" style="margin-right: 20px;">Cancel</button>
+                        <button onclick="noteRequest()" class="btn btn-danger" data-dismiss="modal" style="width: 180px;">Cancel request</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.min.js"></script>
+    <script src="/js/model/bookRequestAdmin.js"></script>
+    <script src="/js/controllers/bookRequestStaff.js"></script>
+</body>
+
+</html>

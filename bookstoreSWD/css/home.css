@@ -1,0 +1,53 @@
+header {
+    height: 100px;
+    background-color: rgba(251, 235, 181, 1);
+}
+
+header img {
+    height: 80px;
+    width: 80px;
+    margin-top: 10px;
+    margin-left: 100px;
+}
+
+header .search {
+    justify-content: center;
+    margin-left: 245px;
+}
+
+header .search input {
+    width: 620px;
+    height: 50px;
+    margin-top: 25px;
+    border: none;
+    outline: none;
+
+}
+
+header .search button {
+    height: 50px;
+    width: 50px;
+    margin-top: 25px;
+    margin-left: 0px;
+    border: none;
+    outline: none;
+}
+
+header .icon {
+    margin-top: 30px;
+    margin-left: 150px;
+}
+
+header .shopping, header .user {
+    border: none;
+    background-color: rgba(251, 235, 181, 1);
+    height: 40px;
+    width: 40px;
+    font-size: 25px;
+    outline: nonefind;
+}
+
+header .user {
+    margin-left: 100px;
+}
+

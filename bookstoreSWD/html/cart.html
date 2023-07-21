@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cart</title>
+
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+
+    <!-- Font awsome  -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link rel="stylesheet" href="/css/user/style.css" />
+  </head>
+
+  <body>
+    <header class="d-flex">
+      <a href="/html/index.html"><img src="/img/logo.png" alt="" /></a>
+      <!-- <div class="search d-flex">
+      <div>
+        <input type="text" placeholder="Tìm sản phẩm mong muốn...">
+      </div>
+      <div>
+        <button><i class="fa-solid fa-magnifying-glass"></i></button>
+      </div>
+
+    </div> -->
+      <div style="margin-left: 1000px" class="icon">
+        <a href="/html/cart.html"
+          ><button class="shopping">
+            <i class="fa-solid fa-cart-shopping"></i></button
+        ></a>
+        <a href="/html/profile.html"
+          ><button class="user"><i class="fa-solid fa-user"></i></button
+        ></a>
+      </div>
+    </header>
+
+    <section id="cart" class="section-p1">
+      <table width="100%">
+        <thead>
+          <tr>
+            <td>Image</td>
+            <td>Product</td>
+            <td>Price</td>
+            <td>Quantity</td>
+            <td>Subtotal</td>
+            <td>Remove</td>
+          </tr>
+        </thead>
+
+        <tbody></tbody>
+      </table>
+    </section>
+
+    <section id="cart-add" class="section-p1">
+      <div id="subtotal">
+        <h3>Cart Totals</h3>
+        <table>
+          <tr>
+            <td>Cart Subtotal</td>
+            <td id="cart-subtotal"></td>
+          </tr>
+          <tr>
+            <td>Shipping</td>
+            <td id="shipping-fee"></td>
+          </tr>
+          <tr>
+            <td><strong>Total</strong></td>
+            <td id="cart-total"><strong></strong></td>
+          </tr>
+        </table>
+        <button class="normal" onclick="paymentHandler()">
+          Proceed to checkout
+        </button>
+      </div>
+    </section>
+
+    <script src="/js/controllers/user/script.js"></script>
+    <script src="/js/controllers/user/helper.js"></script>
+    <script src="/js/controllers/user/cart.js"></script>
+  </body>
+</html>

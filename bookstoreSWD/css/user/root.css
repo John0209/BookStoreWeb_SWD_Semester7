@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap');
+body {
+  font-size: 16px;
+  box-sizing: border-box;
+  margin: 0;
+  font-family: 'Spartan', sans-serif;
+}
+a{
+  text-decoration: none;
+  color: black;
+}
+ul{
+  padding: 0;
+}
+li{
+  list-style-type: none;
+}
+.d-none{
+  display: none;
+}
+.nav {
+  background-color: beige;
+  height: 100px;
+  width: 100vw;
+}
+.search-box {
+  width: 30%;
+  display: inline-block;
+  background-color: white;
+  height: 25px;
+  padding: 10px 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 35px;
+}
+.search-box input[type="text"] {
+  border: none;
+  outline: none;
+}
+.search-box i {
+  color: coral;
+  cursor: pointer;
+}
+.tab-tree-home {
+  font-weight: 600;
+  cursor: pointer;
+}
+.bg-main {
+  background-image: linear-gradient(to right top, #fdfdfd, #fdfbfc, #fdf8f8, #fbf6f2, #f5f6ef);
+  height: 200px;
+  width: 100vw;
+}
+.bg-main h1{
+  font-weight: 600;
+}
+.bg-main-full {
+  background-image: url('../img/assets/bookshelf.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.cover-box{
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.text-white {
+  color: #ffffff;
+}
+.text-label {
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+.text-small {
+  font-size: 0.8rem;
+}
+.text-center {
+  text-align: center;
+}
+.m-20 {
+  margin: 20px;
+}
+.text-bold {
+  font-weight: bold;
+}
+.text-opacity {
+  opacity: 0.7;
+}
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.flex-around {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.flex-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.flex-start {
+  display: flex;
+  justify-content: stretch;
+  align-items: center;
+}
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+.w-100 {
+  width: 100px;
+}
+.w-75 {
+  width: 75px;
+}
+.w-50 {
+  width: 50px;
+}
+.w-25 {
+  width: 25px;
+}
+.mt-15{
+  margin-top: 15px
+}
+.mt-50{
+  margin-top: 50px
+}
+.mt-95{
+  margin-top: 95px
+}
+.mr-10 {
+  margin-right: 10px;
+}
+.mr-15 {
+  margin-right: 15px;
+}
+.mr-30 {
+  margin-right: 30px;
+}
+.mr-100 {
+  margin-right: 100px;
+}
+.mr-34 {
+  margin-right: 34px;
+}
+.mt-100{
+  margin-top: 50px;
+}
+.px-20{
+  padding-left: 20px;
+  padding-right: 20px;
+}

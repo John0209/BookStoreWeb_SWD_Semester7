@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkout</title>
+  <script src="https://kit.fontawesome.com/25cf0219b6.js" crossorigin="anonymous"></script>
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+  <!-- Font awsome  -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <link rel="stylesheet" href="/css/user/checkout.css">
+</head>
+
+<body>
+  <header class="d-flex">
+    <a href="/html/index.html"><img src="/img/logo.png" alt=""></a>
+    <div class="search d-flex">
+      <div>
+        <input type="text" placeholder="Tìm sản phẩm mong muốn...">
+      </div>
+      <div>
+        <button><i class="fa-solid fa-magnifying-glass"></i></button>
+      </div>
+
+    </div>
+    <div class="icon">
+      <a href="cart.html"><button class="shopping"><i class="fa-solid fa-cart-shopping"></i></button></a>
+      <a href="/html/profile.html"><button class="user"><i class="fa-solid fa-user"></i></button></a>
+    </div>
+  </header>
+  <div class="bg-main flex-center">
+    <div class="flex-column flex-center">
+      <img class="w-25" src="/img copy/assets/small_logo.jpg" alt="small logo">
+      <h1>Checkout</h1>
+      <span class="tab-tree"><span class="tab-tree-home"><a href="./login.html">Home &nbsp
+            ></a></span><span>Checkout</span></span>
+    </div>
+  </div>
+  <div class="container flex-around">
+    <div class="checkout-form">
+      <span class="detail-title">Checkout Detail</span>
+      <form onsubmit="checkout();return false" id="checkout-form" class="flex-column">
+        <div>
+          <label class="text-label" fullName">Full Name</label>
+          <input type="text" id="fullName" name="fullName">
+        </div>
+
+        <div>
+          <label class="text-label" for="workPlace">Work Place (optiomal)</label>
+          <input type="text" id="workPlace" name="workPlace">
+        </div>
+
+        <div>
+          <label class="text-label" for="gender">Giới tính</label>
+          <select name="gender" id="gender">
+            <option value="male">Nam</option>
+            <option value="female">Nữ</option>
+            <option value="others">Khác</option>
+          </select>
+        </div>
+
+        <div>
+          <label class="text-label" for="address">Tên Đường</label>
+          <input type="text" id="address" name="address">
+        </div>
+
+        <div>
+          <label class="text-label" for="district">Huyện / Quận</label>
+          <input type="text" id="district" name="district">
+        </div>
+
+        <div>
+          <label class="text-label" for="province">Tỉnh thành</label>
+          <select class="text-opacity province" id="province">
+            <option class="text-opacity" value="" disabled selected>Chọn tỉnh thành</option>
+            <option value="hcm">Hồ Chí Minh</option>
+            <option value="dn">Đà Nẵng</option>
+            <option value="kt">Kontum</option>
+            <option value="others">Khác</option>
+          </select>
+        </div>
+
+        <div>
+          <label class="text-label" for="phone">Số Điện Thoại</label>
+          <input type="text" id="phone" name="phone">
+        </div>
+      </form>
+    </div>
+    <div class="checkout px-20">
+      <div class="flex-between">
+        <span>Product</span>
+        <span>Total</span>
+      </div>
+      <div id="payment-item">
+      </div>
+      <div id="total-payment" class="flex-between mt-15">
+
+      </div>
+      <hr />
+      <div>
+        <div class="mt-15">
+          <i class="fa fa-circle"></i>
+          <span>Cash On Delivery</span>
+        </div>
+        <small class="text-opacity">Pay for shippers when receiving order</small>
+      </div>
+      <div class="mt-50">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga autem odit architecto quidem illo qui ducimus
+        aliquam enim aut similique tempora, aperiam quas hic quae voluptate. Quam recusandae libero ex?
+      </div>
+      <div class="text-center mt-50">
+        <button onclick="checkout()" type="button" class="btn-payment">Đặt Hàng</button>
+      </div>
+    </div>
+  </div>
+  <div class="description flex-around">
+    <div class="flex-column">
+      <span class="text-bold">Free Delivery</span>
+      <small class="text-opacity">For all orders over VND 150.00,</small>
+    </div>
+    <div class="flex-column">
+      <span class="text-bold">7 Days Return</span>
+      <small class="text-opacity">Return defective products within 7 days from the date of receipt</small>
+    </div>
+    <div class="flex-column">
+      <span class="text-bold">Secure payment</span>
+      <small class="text-opacity">100% secure and safe payment</small>
+    </div>
+  </div>
+  <footer class="flex-around">
+    <div class="text-opacity">
+      Lô E2a-7, Đường D1, Đ. D1, Long Thạnh Mỹ, Thành Phố Thủ Đức, Thành phố Hồ Chí Minh 700000
+    </div>
+    <div class="flex-column">
+      <span class="text-opacity">Links</span>
+      <ul>
+        <li>Home</li>
+        <li>Shop</li>
+        <li>About</li>
+      </ul>
+    </div>
+    <div>
+      <span class="text-opacity">Help</span>
+      <ul>
+        <li>Payment Options</li>
+        <li>Returns</li>
+        <li>Privacy policies</li>
+      </ul>
+    </div>
+  </footer>
+  <script src="/js/controllers/user/checkout.service.js"></script>
+</body>
+
+</html>

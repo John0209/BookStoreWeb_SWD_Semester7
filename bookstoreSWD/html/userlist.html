@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+
+    <link rel="stylesheet" href="/css/userlist.css" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <div class="container-fluid container-color">
+      <div class="row flex-nowrap">
+        <div
+          class="col-auto col-md-3 col-xl-2 px-sm-2 px-0 primary-ad rounded-ad"
+        >
+          <div
+            class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white min-vh-100"
+          >
+            <a
+              href="/"
+              class="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-white text-decoration-none"
+            >
+              <img
+                src="https://png.pngtree.com/template/20190316/ourmid/pngtree-books-logo-image_79143.jpg"
+                style="width: 50px; height: 50px"
+              />
+            </a>
+            <ul
+              class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start"
+              id="menu"
+            >
+              <li class="nav-item">
+                <a
+                  href="/html/productlist.html"
+                  class="nav-link align-middle px-0"
+                >
+                  <i class="fa-solid fa-list cl-text-sb"></i>
+                  <span class="ms-1 d-none d-sm-inline cl-text-sb"
+                    >Product List</span
+                  >
+                </a>
+              </li>
+              <li class="nav-item">
+                <a
+                  href="/html/importation.html"
+                  class="nav-link px-0 align-middle"
+                >
+                  <i class="fa-sharp fa-solid fa-file-import cl-text-sb"></i>
+                  <span class="ms-1 d-none d-sm-inline cl-text-sb"
+                    >Importation</span
+                  ></a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  href="/html/inventory.html"
+                  class="nav-link px-0 align-middle cl-text-sb"
+                >
+                  <i class="fa-solid fa-warehouse"></i>
+                  <span class="ms-1 d-none d-sm-inline cl-text-sb"
+                    >Inventory</span
+                  >
+                </a>
+              </li>
+              <li class="nav-item">
+                <a
+                  href="/html/bookRequestAdmin.html"
+                  id="staff"
+                  class="nav-link px-0 align-middle"
+                >
+                  <i class="fa-regular fa-clipboard cl-text-sb"></i>
+                  <span class="ms-1 d-none d-sm-inline cl-text-sb"
+                    >Book Request</span
+                  >
+                </a>
+              </li>
+              <li
+                id="disable"
+                class="main disable nav-item"
+                style="position: relative"
+              >
+                <a
+                  href="/html/userlist.html"
+                  class="nav-link px-0 align-middle"
+                >
+                  <i class="fa-solid fa-user"></i>
+                  <span class="ms-1 d-none d-sm-inline cl-text-sb"
+                    >User List</span
+                  >
+                </a>
+                <div
+                  id="censored"
+                  style="
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    bottom: 0;
+                    left: 0;
+                    background-color: black;
+                    opacity: 0.3;
+                    border-radius: 10px;
+                  "
+                ></div>
+              </li>
+              <li class="nav-item">
+                <a
+                  href="/html/orderlist.html"
+                  class="nav-link px-0 align-middle"
+                >
+                  <i class="fa-regular fa-clipboard cl-text-sb"></i>
+                  <span class="ms-1 d-none d-sm-inline cl-text-sb"
+                    >Order List</span
+                  >
+                </a>
+              </li>
+            </ul>
+            <hr />
+            <div class="admin pb-4">
+              <a
+                href="/html/login.html"
+                class="nav-link px-0 align-middle cl-text-sb"
+              >
+                <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                <span class="ms-1 d-none d-sm-inline cl-text-sb">Log out</span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col py-3">
+          <div class="container">
+            <h3 class="cl-text-ad mb-3">User List</h3>
+            <div
+              class="cl-bg-ad rounded-bg"
+              style="max-height: 80vh; overflow: hidden"
+            >
+              <div class="p-4">
+                <div class="mb-3 search-bg">
+                  <div class="input-group px-5 pt-3">
+                    <input
+                      type="text"
+                      class="px-3 mr-5"
+                      placeholder="Enter to search for a user"
+                      id="search-input"
+                      style="
+                        width: 90%;
+                        height: 40px;
+                        color: #bebfc3;
+                        border-radius: 15px;
+                        border: 2px solid #bebfc3;
+                      "
+                    />
+                    <div class="input-group-append">
+                      <button
+                        style="
+                          height: 40px;
+                          border-radius: 15px;
+                          color: black;
+                          border: 2px solid #bebfc3;
+                        "
+                        class="btn btn-outline-secondary"
+                        onclick="searchUser()"
+                        type="button"
+                      >
+                        <i class="fa fa-search"></i>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
+                <table class="table table-hover mt-4" id="bookTable">
+                  <thead>
+                    <tr>
+                      <th class="table-col" scope="col">#</th>
+                      <th class="table-col" scope="col">Username</th>
+                      <th class="table-col" scope="col">Email</th>
+                      <th class="table-col" scope="col">Phone</th>
+                      <th class="table-col" scope="col">Role</th>
+                      <th class="table-col" scope="col">Status</th>
+                    </tr>
+                  </thead>
+                  <tbody id="user-table-body">
+                    <tr>
+                      <td>1</td>
+                      <td>Username</td>
+                      <td>Email</td>
+                      <td>Phone</td>
+                      <td>Role</td>
+                      <td>Status</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="/js/controllers/userlist.js"></script>
+  </body>
+</html>

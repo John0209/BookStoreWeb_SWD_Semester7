@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Book Ecommerce Tutorial</title>
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper@7/swiper-bundle.min.css"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+
+    <!-- Font awsome  -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="/css/user/style.css" />
+    <link rel="stylesheet" href="/css/user/shop.css" />
+  </head>
+
+  <body>
+    <!-- <section id="header">
+    <a href="#"><img src="img/logo.png" class="logo" alt="" /></a>
+
+    <div>
+      <ul id="navbar">
+        <li><a href="index.html">Home</a></li>
+        <li><a class="active" href="shop.html">Shop</a></li>
+        <li id="lg-bag">
+          <a href="cart.html"><i class="far fa-shopping-bag"></i></a>
+        </li>
+        <a href="#" id="close"><i class="far fa-times"></i></a>
+      </ul>
+    </div>
+    <div id="mobile">
+      <a href="cart.html"><i class="far fa-shopping-bag"></i></a>
+      <i id="bar" class="fas fa-outdent"></i>
+    </div>
+  </section> -->
+
+    <header class="d-flex">
+      <img src="/img/logo.png" alt="" />
+      <div class="search d-flex">
+        <div>
+          <input type="text" placeholder="Tìm sản phẩm mong muốn..." />
+        </div>
+        <div>
+          <button><i class="fa-solid fa-magnifying-glass"></i></button>
+        </div>
+      </div>
+      <div class="icon">
+        <a href="cart.html"
+          ><button class="shopping">
+            <i class="fa-solid fa-cart-shopping"></i></button
+        ></a>
+        <a href="/html/profile.html"
+          ><button class="user"><i class="fa-solid fa-user"></i></button
+        ></a>
+      </div>
+    </header>
+
+    <section id="filter">
+      <div class="category-filter">
+        <label for="category-select">Filter Category:</label>
+        <select id="category-select">
+          <option value="all">All</option>
+        </select>
+      </div>
+    </section>
+    <section id="product1" class="section-p1">
+      <div class="pro-container"></div>
+    </section>
+
+    <!-- <section id="pagination" class="section-p1">
+    <a href="#">1</a>
+    <a href="#">2</a>
+    <a href="#"><i class="fal fa-long-arrow-alt-right"></i></a>
+  </section> -->
+
+    <script src="/js/controllers/user/script.js"></script>
+    <script src="/js/controllers/user/helper.js"></script>
+    <script src="/js/controllers/user/scriptshopfilter.js"></script>
+  </body>
+</html>

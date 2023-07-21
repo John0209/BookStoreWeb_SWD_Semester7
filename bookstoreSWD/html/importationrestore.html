@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+  <!-- SweetAlert CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.18/dist/sweetalert2.min.css" />
+
+  <!-- SweetAlert JavaScript -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.18/dist/sweetalert2.all.min.js"></script>
+
+  <link rel="stylesheet" href="/css/importationrestore.css" />
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="container-fluid container-color">
+    <div class="row flex-nowrap">
+      <div class="col-auto col-md-3 col-xl-2 px-sm-2 px-0 primary-ad rounded-ad">
+        <div class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white min-vh-100">
+          <a href="/" class="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+            <img src="https://png.pngtree.com/template/20190316/ourmid/pngtree-books-logo-image_79143.jpg"
+              style="width: 50px; height: 50px" />
+          </a>
+          <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start" id="menu">
+            <li class="nav-item">
+              <a href="/html/productlist.html" class="nav-link align-middle px-0">
+                <i class="fa-solid fa-list cl-text-sb"></i>
+                <span class="ms-1 d-none d-sm-inline cl-text-sb">Product List</span>
+              </a>
+            </li>
+            <li class="main nav-item">
+              <a href="/html/importation.html" class="nav-link px-0 align-middle">
+                <i class="fa-sharp fa-solid fa-file-import cl-text-sb"></i>
+                <span class="ms-1 d-none d-sm-inline cl-text-sb">Importation</span></a>
+            </li>
+            <li class="nav-item">
+              <a href="/html/inventory.html" class="nav-link px-0 align-middle cl-text-sb">
+                <i class="fa-solid fa-warehouse"></i>
+                <span class="ms-1 d-none d-sm-inline cl-text-sb">Inventory</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="/html/bookRequestAdmin.html" id="staff" class="nav-link px-0 align-middle">
+                <i class="fa-regular fa-clipboard cl-text-sb"></i>
+                <span class="ms-1 d-none d-sm-inline cl-text-sb">Book Request</span>
+              </a>
+            </li>
+            <li id="disable" class="disable nav-item" style="position: relative;">
+              <a href="/html/userlist.html" class="nav-link px-0 align-middle">
+                <i class="fa-solid fa-user"></i>
+                <span class="ms-1 d-none d-sm-inline cl-text-sb">User List</span>
+              </a>
+              <div id="censored"
+                style="position: absolute; top: 0; right: 0; bottom: 0; left: 0; background-color: black; opacity: 0.3; border-radius: 10px;">
+              </div>
+            </li>
+            <li class="nav-item">
+              <a href="/html/orderlist.html" class="nav-link px-0 align-middle">
+                <i class="fa-regular fa-clipboard cl-text-sb"></i>
+                <span class="ms-1 d-none d-sm-inline cl-text-sb">Order List</span>
+              </a>
+            </li>
+          </ul>
+          <hr />
+          <div class="admin pb-4">
+            <a href="/html/login.html" class="nav-link px-0 align-middle cl-text-sb">
+              <i class="fa-solid fa-arrow-right-from-bracket"></i>
+              <span class="ms-1 d-none d-sm-inline cl-text-sb">Log out</span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="col py-3">
+        <div class="container">
+          <h3 class="mt-4 cl-text-ad mb-3">Data Recovery</h3>
+          <div class="cl-bg-ad rounded-bg min-vh-100">
+            <div class="px-4">
+              <div id="bg-container" class="bg-container">
+
+                <div class="title">
+                  <h6 id="importation-stt"></h6>
+                  <h6></h6>
+                  <h6 id="importation-user"></h6>
+                </div>
+                <div class="book-list">
+                  <div id="book-detail">
+                    <h6 id="book-stt"></h6>
+                    <img id="book-img" />
+                    <div>
+                      <h6 id="book-title"></h6>
+                      <p id="book-price"></p>
+                    </div>
+                    <p id="book-quantity"></p>
+                    <p id="book-total"></p>
+                  </div>
+                </div>
+                <div>
+                  <h6 id="importation-amount"></h6>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="/js/controllers/importationrestore.js"></script>
+  <div class="modal fade" id="restoreModal" tabindex="-1" aria-labelledby="restoreModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content" style="background-color: #fbebb5; border-radius: 30px">
+        <div class="modal-body h5 d-flex justify-content-center">
+          Are you sure you want to recover the data?
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary rounded-5" data-bs-dismiss="modal"
+            style="background-color: #ffffff; color: black">
+            Cancel
+          </button>
+          <button id="confirmRestore" type="button" class="btn btn-success rounded-5" onclick="confirmRestore()">
+            Restore
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

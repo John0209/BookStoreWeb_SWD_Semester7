@@ -1,0 +1,13 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.FinalProject" parent="Theme.Material3.Light.NoActionBar">
+        <item name="android:windowActionBarOverlay">true</item>
+    </style>
+    <style name="Theme.FinalProject" parent="Base.Theme.FinalProject" />
+
+    <style name="roundimage" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">20dp</item>
+        <item name="color">@color/white</item>
+    </style>
+</resources>

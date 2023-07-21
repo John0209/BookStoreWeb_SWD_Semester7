@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tech2etc Ecommerce Tutorial</title>
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+  <!-- Font awsome  -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <link rel="stylesheet" href="/css/user/style.css" />
+</head>
+
+<body>
+  <header class="d-flex">
+    <a href="/html/index.html"><img src="/img/logo.png" alt=""></a>
+    <div class="search d-flex">
+      <div>
+        <input type="text" placeholder="Tìm sản phẩm mong muốn...">
+      </div>
+      <div>
+        <button><i class="fa-solid fa-magnifying-glass"></i></button>
+      </div>
+
+    </div>
+    <div class="icon">
+      <a href="cart.html"><button class="shopping"><i class="fa-solid fa-cart-shopping"></i></button></a>
+      <a href="/html/profile.html"><button class="user"><i class="fa-solid fa-user"></i></button></a>
+    </div>
+  </header>
+
+  <section id="prodetails" class="section-p1">
+    <div class="single-pro-image">
+      <img src="" width="75%" id="MainImg" alt="" />
+      <div class="small-img-group">
+        <div class="small-img-col">
+          <img src="" width="75%" class="small-img" alt="" />
+        </div>
+      </div>
+    </div>
+    <div class="single-pro-details">
+      <h4 class="bookTitle"></h4>
+      <h2 class="bookPrice"></h2>
+      <input id="cart-count" type="number" value="1" />
+      <button id="addToCartBtn" class="normal">Add To Cart</button>
+      <h4>Product Details</h4>
+      <span class="bookDetail"></span>
+    </div>
+  </section>
+
+  <section id="product1" class="section-p1">
+    <h2>Related Products</h2>
+    <div class="pro-container"></div>
+  </section>
+
+
+  <script src="/js/controllers/user/script.js"></script>
+  <script src="/js/controllers/user/helper.js"></script>
+  <script src="/js/controllers/user/sproduct.js"></script>
+  <script src="/js/controllers/user/relatedproduct.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profile</title>
+    <script
+      src="https://kit.fontawesome.com/25cf0219b6.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="/css/user/profile.css" />
+  </head>
+  <body>
+    <div style="width: 100%" class="nav flex-around">
+      <a href="/html/index.html"
+        ><img class="w-100" src="/img/logo.png" alt="logo"
+      /></a>
+      <div class="search-box">
+        <input type="text" placeholder="Enter to search for a product" />
+        <i class="fas fa-search"></i>
+      </div>
+      <div class="nav-options flex-around w-75">
+        <a href="cart.html"><i class="fas fa-shopping-cart"></i></a>
+        <a href="profile.html"><i class="fas fa-user-alt"></i></a>
+        <a href="login.html" class="text-bold">X</a>
+      </div>
+    </div>
+    <div class="bg-main flex-center">
+      <div class="flex-column flex-center">
+        <h1 class="account" style="text-align: center">Account Profile</h1>
+        <span class="tab-tree"
+          ><span class="tab-tree-home"
+            ><a href="./login.html">Home &nbsp ></a></span
+          ><span>My Account</span></span
+        >
+      </div>
+    </div>
+    <div class="container flex-around">
+      <div class="profile-form">
+        <div class="icon-section">
+          <i
+            class="fas fa-pen"
+            style="cursor: pointer"
+            onclick="onEditProfile()"
+          ></i>
+          <i
+            class="fa fa-save d-none"
+            style="cursor: pointer"
+            onclick="onSaveProfile()"
+          ></i>
+          <i
+            class="fa fa-times d-none"
+            style="cursor: pointer"
+            onclick="onCancelProfile()"
+          ></i>
+        </div>
+        <form id="profile-form" class="flex-column"></form>
+      </div>
+    </div>
+    <div class="description flex-around">
+      <div class="flex-column">
+        <span class="text-bold">Free Delivery</span>
+        <small class="text-opacity">For all orders over VND 150.00,</small>
+      </div>
+      <div class="flex-column">
+        <span class="text-bold">7 Days Return</span>
+        <small class="text-opacity"
+          >Return defective products within 7 days from the date of
+          receipt</small
+        >
+      </div>
+      <div class="flex-column">
+        <span class="text-bold">Secure payment</span>
+        <small class="text-opacity">100% secure and safe payment</small>
+      </div>
+    </div>
+    <footer class="flex-around">
+      <div class="text-opacity">
+        Lô E2a-7, Đường D1, Đ. D1, Long Thạnh Mỹ, Thành Phố Thủ Đức, Thành phố
+        Hồ Chí Minh 700000
+      </div>
+      <div class="flex-column">
+        <span class="text-opacity">Links</span>
+        <ul>
+          <li>Home</li>
+          <li>Shop</li>
+          <li>About</li>
+        </ul>
+      </div>
+      <div>
+        <span class="text-opacity">Help</span>
+        <ul>
+          <li>Payment Options</li>
+          <li>Returns</li>
+          <li>Privacy policies</li>
+        </ul>
+      </div>
+    </footer>
+    <script src="/js/controllers/user/profile.service.js"></script>
+  </body>
+</html>

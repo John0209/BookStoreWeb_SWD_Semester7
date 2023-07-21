@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rlt_layoutBook"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="10dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout
+        android:layout_marginRight="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_child_item"
+            android:layout_width="120dp"
+            android:layout_height="188dp"
+            android:backgroundTint="@color/backImg"
+            app:cardCornerRadius="15dp">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="100dp"
+                android:layout_height="137dp"
+                android:layout_margin="10dp"
+                android:padding="0dp"
+                app:cardCornerRadius="15dp">
+                <ImageView
+                    android:id="@+id/iv_child_item"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/pi2"></ImageView>
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/nameBook"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="The Republic"
+                android:textStyle="bold"
+                android:layout_marginTop="150dp"
+                android:layout_marginLeft="12dp"
+                ></TextView>
+
+            <TextView
+                android:id="@+id/nameAuthor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="By Plato"
+                android:textSize="12dp"
+                android:textColor="@color/input"
+                android:layout_marginTop="170dp"
+                android:layout_marginLeft="12dp"
+                ></TextView>
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+</RelativeLayout>

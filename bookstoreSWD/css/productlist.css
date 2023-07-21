@@ -1,0 +1,152 @@
+body {
+  height: 100vh;
+}
+.primary-ad {
+  background-color: #fbebb5;
+}
+
+.cl-text-sb {
+  color: #000000;
+}
+.cl-text-ad {
+  color: #280559;
+}
+.rounded-bg {
+  border-radius: 20px;
+}
+.container-color {
+  background-color: #e8e9eb;
+}
+.cl-bg-ad {
+  background-color: #ffffff;
+}
+
+.mg-center {
+  margin: 0 auto;
+}
+.rounded-5 {
+  border-radius: 10px;
+}
+.input-group {
+  display: flex;
+  align-items: center;
+}
+
+.input-group-append {
+  margin-left: -40px; /* Điều chỉnh khoảng cách giữa ô input và biểu tượng */
+}
+
+.input-group-text {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+}
+.nav {
+  width: 190px;
+}
+
+.nav-item {
+  margin-top: 20px;
+  padding-left: 20px;
+  width: 190px;
+  border-radius: 10px;
+}
+.nav-item i {
+  color: #000000;
+}
+.nav-item:hover {
+  background-color: white;
+}
+
+.disable.nav-item:hover {
+  background-color: transparent;
+}
+
+.nav-item:hover i {
+  color: black !important;
+}
+
+.main {
+  background-color: white;
+  width: 190px;
+  border-radius: 10px;
+}
+
+.addBook {
+  margin-left: 700px;
+  height: 50px;
+  margin-top: 20px;
+  outline: none;
+}
+.mr-5 {
+  margin-right: 20px;
+}
+.mg-center {
+  margin: 0 auto;
+}
+.rounded-5 {
+  border-radius: 10px;
+}
+.input-group {
+  display: flex;
+  align-items: center;
+}
+
+.input-group-append {
+  margin-left: -40px; /* Điều chỉnh khoảng cách giữa ô input và biểu tượng */
+}
+
+.input-group-text {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+}
+.fa-edit {
+  cursor: pointer;
+  font-size: 20px;
+}
+.underline {
+  position: relative;
+}
+
+.underline::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 100%;
+  height: 1px;
+  background-color: #d9d9d9;
+}
+input {
+  border-radius: 10px;
+  border: 2px solid #d9d9d9;
+}
+#book-description {
+  width: 100%; /* Đặt chiều rộng ô input là 100% của phần tử chứa nó */
+  min-height: 100px; /* Đặt chiều cao ô input */
+  border-radius: 10px;
+  border: 2px solid #d9d9d9;
+  padding: 5px 10px 5px 10px;
+}
+.bold-column {
+  font-weight: bold;
+}
+.quantity-column {
+  min-width: 25px;
+  max-width: 40px;
+  height: 20px;
+  border-radius: 10px;
+  border: 1px solid #280559;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.table-col {
+  font-weight: normal;
+  color: #92929d;
+}
+.thumbnail {
+  height: 70px;
+  width: 50px;
+}

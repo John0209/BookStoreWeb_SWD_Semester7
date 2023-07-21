@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+
+    <!-- my CSS -->
+    <link rel="stylesheet" href="/css/login.css" />
+  </head>
+
+  <body>
+    <div class="form">
+      <h3>Bookstore</h3>
+
+      <input type="text" placeholder="Username" id="username" />
+      <input type="password" placeholder="Password" id="password" />
+
+      <p class="notification text-center" id="notification"></p>
+
+      <button onclick="login()">Login</button>
+      <p
+        class="d-flex justify-content-end mt-3"
+        style="cursor: pointer"
+        data-bs-toggle="modal"
+        data-bs-target="#forgotPassword"
+      >
+        Forgot password
+      </p>
+      <p class="check text-center">
+        Don't have an account? <a href="/html/register.html"> Sign up</a>
+      </p>
+    </div>
+    <!-- Modal -->
+    <div
+      id="forgotPassword"
+      class="modal fade"
+      tabindex="-1"
+      role="dialog"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="text-center">Forgot Password</h5>
+          </div>
+          <div class="modal-body">
+            <div class="col-md-12">
+              <div class="panel panel-default">
+                <div class="panel-body">
+                  <div class="text">
+                    <p>Enter your email</p>
+                    <div class="panel-body">
+                      <div class="form-group">
+                        <input
+                          class="form-control"
+                          id="email"
+                          placeholder="E-mail Address"
+                          name="email"
+                          type="email"
+                        />
+                      </div>
+                      <input
+                        class="btn btn-success btn-sm"
+                        value="Send My Password"
+                        type="submit"
+                        onclick="sendPasswordResetEmail()"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <script src="/js/controllers/login.js"></script>
+  </body>
+</html>

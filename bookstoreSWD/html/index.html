@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Ecommerce Tutorial</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!-- Font awsome  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="/css/user/style.css">
+</head>
+
+<body>
+
+    <!-- <section id="header">
+        <a href="#"><img src="img/logo.png" class="logo" alt=""></a>
+
+        <div>
+            <ul id="navbar">
+                <li><a class="active" href="index.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li id="lg-bag"><a href="cart.html"><i class="far fa-shopping-bag"></i></a></li>
+                <a href="#" id="close"><i class="far fa-times"></i></a>
+            </ul>
+        </div>
+        <div id="mobile">
+            <a href="cart.html"><i class="far fa-shopping-bag"></i></a>
+            <i id="bar" class="fas fa-outdent"></i>
+        </div>
+    </section> -->
+
+    <!-- <section id="hero">
+        <h4>Trade-in-offer</h4>
+        <h2>Super value deals</h2>
+        <h1>On all products</h1>
+        <p>Save more with coupons & up to 70% off! </p>
+        <button>Shop Now</button>
+    </section> -->
+
+    <header class="d-flex">
+        <img src="/img/logo.png" alt="">
+        <div class="search d-flex">
+            <div>
+                <input type="text" placeholder="Tìm sản phẩm mong muốn...">
+            </div>
+            <div>
+                <button><i class="fa-solid fa-magnifying-glass"></i></button>
+            </div>
+
+        </div>
+        <div class="icon">
+            <a href="cart.html"><button class="shopping"><i class="fa-solid fa-cart-shopping"></i></button></a>
+            <a href="/html/profile.html"><button class="user"><i class="fa-solid fa-user"></i></button></a>
+            <a href="/html/login.html"><button class="user"><i class="fa-solid fa-right-from-bracket"></i></button></a>
+        </div>
+    </header>
+
+    <section id="feature" class="section-p1">
+        <div class="fe-box">
+            <img src="/img copy/features/f1.png" alt="">
+            <h6>Free Shipping</h6>
+        </div>
+        <div class="fe-box">
+            <img src="/img copy/features/f2.png" alt="">
+            <h6>Online Order</h6>
+        </div>
+        <div class="fe-box">
+            <img src="/img copy/features/f3.png" alt="">
+            <h6>Save Money</h6>
+        </div>
+        <div class="fe-box">
+            <img src="/img copy/features/f4.png" alt="">
+            <h6>Promotions</h6>
+        </div>
+        <div class="fe-box">
+            <img src="/img copy/features/f5.png" alt="">
+            <h6>Happy Sell</h6>
+        </div>
+        <div class="fe-box">
+            <img src="/img copy/features/f6.png" alt="">
+            <h6>F24/7 Support</h6>
+        </div>
+    </section>
+
+    <section id="product1" class="section-p1">
+        <h4 class="heading"> <span>Featured</span> Products </h4>
+        <div class="pro-container">
+        </div>
+        <!-- <div class="pagination-container">
+            <button class="pagination-button prev-page" disabled>Previous</button>
+            <div class="pagination-pages"></div>
+            <button class="pagination-button next-page">Next</button>
+        </div> -->
+        <a href="shop.html"> <span>View All</span> Products </a>
+    </section>
+
+    <section id="bestSeller" class="section-p1">
+        <h4 class="heading">Best <span>Sellers</span></h4>
+        <div class="pro-container"></div>
+        <div class="show-more-container">
+            <a href="shop.html" class="show-more-link">Show more</a>
+        </div>
+    </section>
+
+
+    <script src="/js/controllers/user/script.js"></script>
+    <script src="/js/controllers/user/featuredproduct.js"></script>
+    <script src="/js/controllers/user/bestseller.js"></script>
+    <script src="/js/controllers/user/helper.js"></script>
+</body>
+
+</html>

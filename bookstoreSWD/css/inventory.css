@@ -1,0 +1,96 @@
+body {
+  min-height: 100vh;
+  max-height: 100vh;
+}
+.primary-ad {
+  background-color: #fbebb5;
+}
+
+.cl-text-sb {
+  color: #000000;
+}
+.cl-text-ad {
+  color: #280559;
+}
+.rounded-bg {
+  border-radius: 20px;
+}
+.container-color {
+  background-color: #e8e9eb;
+}
+.cl-bg-ad {
+  background-color: #ffffff;
+}
+
+.mg-center {
+  margin: 0 auto;
+}
+.rounded-5 {
+  border-radius: 10px;
+}
+.input-group {
+  display: flex;
+  align-items: center;
+}
+
+.input-group-append {
+  margin-left: -40px; /* Điều chỉnh khoảng cách giữa ô input và biểu tượng */
+}
+
+.input-group-text {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+}
+
+.nav {
+  width: 190px;
+}
+
+.nav-item {
+  margin-top: 20px;
+  padding-left: 20px;
+  width: 190px;
+  border-radius: 10px;
+}
+
+.nav-item span {
+  margin-left: 5px;
+}
+.nav-item i {
+  color: #000000;
+}
+.nav-item:hover {
+  background-color: white;
+}
+
+.disable.nav-item:hover {
+  background-color: transparent;
+  
+}
+
+.nav-item:hover i {
+  color: black!important;
+}
+
+.main {
+  background-color: white;
+  width: 190px;
+  border-radius: 10px;
+}
+.mr-5 {
+  margin-right: 20px;
+}
+.table-col {
+  font-weight: normal;
+  color: #92929d;
+}
+.bold-column {
+  font-weight: 600;
+}
+.error-message {
+  font-weight: 600;
+}
+.p-4 {
+  flex-grow: 1;
+}
