@@ -15,7 +15,8 @@ function init() {
 
 init();
 function fetchBooks() {
-  fetch("https://book0209.azurewebsites.net/api/book/getBook")
+  fetch("http://bookstoreprn-001-site1.itempurl.com/api/books")
+  //fetch("https://book0209.azurewebsites.net/api/book/getBook")
     .then((response) => response.json())
     .then((data) => {
       const tableBody = document.getElementById("book-table-body");
@@ -105,7 +106,8 @@ function searchBooks() {
   let count = 0; // Biến đếm số thứ tự
 
   fetch(
-    `https://book0209.azurewebsites.net/api/book/searchBook?nameBook=${searchQuery}`
+    //`https://book0209.azurewebsites.net/api/book/searchBook?nameBook=${searchQuery}`
+    `http://bookstoreprn-001-site1.itempurl.com/api/books?nameBook=${searchQuery}`
   )
     .then((response) => response.json())
     .then((data) => {

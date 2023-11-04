@@ -1,5 +1,5 @@
 async function login() {
-  const url = "https://book0209.azurewebsites.net/api/user/login"; // Replace with your actual API endpoint
+  const url = "http://bookstoreprn-001-site1.itempurl.com/api/users/login"; // Replace with your actual API endpoint
 
   var username = document.getElementById("username").value;
   console.log("username: ", username);
@@ -47,8 +47,8 @@ async function login() {
 
 function sendPasswordResetEmail() {
   const email = document.getElementById("email").value;
-
-  const api_recoverPassword = `https://book0209.azurewebsites.net/api/user/recoverPassword?email=${encodeURIComponent(
+  const api_recoverPassword = `http://bookstoreprn-001-site1.itempurl.com/api/users/recover/${encodeURIComponent(
+  //const api_recoverPassword = `https://book0209.azurewebsites.net/api/user/recoverPassword?email=${encodeURIComponent(
     email
   )}`;
   console.log(`${encodeURIComponent(email)}`);

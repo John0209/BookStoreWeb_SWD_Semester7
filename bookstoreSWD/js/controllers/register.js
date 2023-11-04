@@ -29,7 +29,8 @@ function validate() {
 }
 
 async function register() {
-  const url = "https://book0209.azurewebsites.net/api/user/createUserFE";
+  //const url = "https://book0209.azurewebsites.net/api/user/createUserFE";
+  const url = "http://bookstoreprn-001-site1.itempurl.com/api/users";
 
   var username = document.getElementById("username").value;
   console.log("username: ", username);
