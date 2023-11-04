@@ -16,7 +16,8 @@ function init() {
 init();
 
 function fetchUsers() {
-  fetch("https://book0209.azurewebsites.net/api/user/getUser")
+  fetch("http://bookstoreprn-001-site1.itempurl.com/api/users")
+  //fetch("https://book0209.azurewebsites.net/api/user/getUser")
     .then((response) => response.json())
     .then((data) => {
       const tableBody = document.getElementById("user-table-body");
@@ -109,7 +110,8 @@ function searchUser() {
   const searchQuery = searchInput.value;
 
   fetch(
-    `https://book0209.azurewebsites.net/api/user/getUserByName?userName=${searchQuery}`
+    `http://bookstoreprn-001-site1.itempurl.com/api/users?userName=${searchQuery}`
+    //`https://book0209.azurewebsites.net/api/user/getUserByName?userName=${searchQuery}`
   )
     .then((response) => response.json())
     .then((data) => {
@@ -190,7 +192,8 @@ function updateUserRole(userId, newRole) {
   };
 
   fetch(
-    `https://book0209.azurewebsites.net/api/user/updateRole?userId=${userId}&roleID=${newRole}`,
+    `http://bookstoreprn-001-site1.itempurl.com/api/users/role/${userId}?option=${newRole}`,
+    //`https://book0209.azurewebsites.net/api/user/updateRole?userId=${userId}&roleID=${newRole}`,
     {
       method: "PATCH",
       headers: {
@@ -214,7 +217,8 @@ function updateUserStatus(userId, newStatus) {
   };
   if (!newStatus) {
     fetch(
-      `https://book0209.azurewebsites.net/api/user/deleteUser?userId=${userId}`,
+      `http://bookstoreprn-001-site1.itempurl.com/api/users/${userId}?option=1`,
+      //`https://book0209.azurewebsites.net/api/user/deleteUser?userId=${userId}`,
       {
         method: "PATCH",
         headers: {
@@ -232,7 +236,8 @@ function updateUserStatus(userId, newStatus) {
       });
   } else {
     fetch(
-      `https://book0209.azurewebsites.net/api/user/restoreUser?userId=${userId}`,
+      `http://bookstoreprn-001-site1.itempurl.com/api/users/${userId}?option=2`,
+      //`https://book0209.azurewebsites.net/api/user/restoreUser?userId=${userId}`,
       {
         method: "PATCH",
         headers: {

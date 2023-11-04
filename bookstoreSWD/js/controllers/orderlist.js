@@ -27,7 +27,8 @@ function formatDateTime(dateTimeString) {
 }
 
 function fetchOrders() {
-  fetch("https://book0209.azurewebsites.net/api/order/getOrder")
+  fetch("http://bookstoreprn-001-site1.itempurl.com/api/orders")
+  //fetch("https://book0209.azurewebsites.net/api/order/getOrder")
     .then((response) => response.json())
     .then((data) => {
       const tableBody = document.querySelector("#orderTable tbody");
@@ -79,7 +80,8 @@ function fetchOrders() {
 function searchOrder() {
   const searchInput = document.getElementById("search-input").value;
   fetch(
-    "https://book0209.azurewebsites.net/api/order/searchByOrderCode?orderCode=" +
+    "http://bookstoreprn-001-site1.itempurl.com/api/orders?orderCode=" +
+    //"https://book0209.azurewebsites.net/api/order/searchByOrderCode?orderCode=" +
       searchInput
   )
     .then((response) => {
@@ -156,6 +158,7 @@ function openDetail(orderId) {
   console.log("Clicked orderId:", orderId);
 
   fetch(
+    
     "https://book0209.azurewebsites.net/api/orderDetail/getByOrderId?Order_id=" +
       orderId
   )
@@ -259,7 +262,8 @@ function deleteOrder(order_Id) {
 
 function confirmDelete(order_Id) {
   fetch(
-    `https://book0209.azurewebsites.net/api/order/deleteOrder?orderId=${order_Id}`,
+    `http://bookstoreprn-001-site1.itempurl.com/api/orders?orderId=${order_Id}`,
+    //`https://book0209.azurewebsites.net/api/order/deleteOrder?orderId=${order_Id}`,
     {
       method: "PATCH",
     }

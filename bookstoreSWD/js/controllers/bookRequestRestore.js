@@ -16,7 +16,8 @@ function init() {
 init();
 
 async function renderTable() {
-  const url = "https://book0209.azurewebsites.net/api/request/getRequest";
+  //const url = "https://book0209.azurewebsites.net/api/request/getRequest";
+  const url = "http://bookstoreprn-001-site1.itempurl.com/api/requests";
 
   const getTodo = async (url) => {
     return await fetch(url);

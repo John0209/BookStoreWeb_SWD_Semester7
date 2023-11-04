@@ -16,7 +16,8 @@ function init() {
 init();
 
 async function selectCate() {
-  const url = "https://book0209.azurewebsites.net/api/category/getCategory";
+  const url = "http://bookstoreprn-001-site1.itempurl.com/api/categories";
+  //const url = "https://book0209.azurewebsites.net/api/category/getCategory";
 
   const getTodo = async (url) => {
     return await fetch(url);
@@ -40,7 +41,9 @@ async function selectCate() {
 selectCate();
 
 async function renderTable() {
-  const url = "https://book0209.azurewebsites.net/api/request/getRequest";
+  
+  const url = "http://bookstoreprn-001-site1.itempurl.com/api/requests";
+  //const url = "https://book0209.azurewebsites.net/api/request/getRequest";
 
   const getTodo = async (url) => {
     return await fetch(url);
@@ -181,7 +184,8 @@ function validate1() {
 
 async function newBookRequest() {
   const url =
-    "https://book0209.azurewebsites.net/api/request/createRequestBookNew";
+    //"https://book0209.azurewebsites.net/api/request/createRequestBookNew"; 
+    "http://bookstoreprn-001-site1.itempurl.com/api/requests?option=1";
 
   var rs = validate1();
   console.log('rs.newBook.newType: ', rs.newBook.newType);
@@ -251,7 +255,9 @@ function validate2() {
 }
 
 async function getBook() {
-  const url = "https://book0209.azurewebsites.net/api/book/getBook";
+  //const url = "https://book0209.azurewebsites.net/api/book/getBook";
+  const url = "http://bookstoreprn-001-site1.itempurl.com/api/books";
+  
 
   const getTodo = async (url) => {
     return await fetch(url);
@@ -272,13 +278,15 @@ getBook();
 
 async function oldBookRequest() {
   const url2 =
-    "https://book0209.azurewebsites.net/api/request/createRequestBookOld";
+    //"https://book0209.azurewebsites.net/api/request/createRequestBookOld";
+    "http://bookstoreprn-001-site1.itempurl.com/api/requests?option=2";
 
   var rs1 = validate2();
   console.log("rs1: ", rs1);
   console.log(rs1.oldBook.id);
-
-  const url1 = `https://book0209.azurewebsites.net/api/book/getBookDetail?bookId=${rs1.oldBook.id}`;
+  
+  const url1 = `http://bookstoreprn-001-site1.itempurl.com/api/books/${rs1.oldBook.id}`;
+  //const url1 = `https://book0209.azurewebsites.net/api/book/getBookDetail?bookId=${rs1.oldBook.id}`;
 
   const getTodo = async (url1) => {
     return await fetch(url1);
@@ -350,7 +358,9 @@ async function deleteRequest() {
   const requestId = JSON.parse(data);
   console.log("requestId: ", requestId);
 
-  const url = `https://book0209.azurewebsites.net/api/request/deleteRequest?requestId=${requestId}`;
+  
+  const url = `http://bookstoreprn-001-site1.itempurl.com/api/requests?requestId=${requestId}`;
+  //const url = `https://book0209.azurewebsites.net/api/request/deleteRequest?requestId=${requestId}`; ko đúng
 
   fetch(url, {
     method: "PATCH",
@@ -374,7 +384,8 @@ async function getRequestUpdate(id) {
 
   console.log(id);
 
-  const url1 = `https://book0209.azurewebsites.net/api/request/getRequestById?requestId=${id}`;
+  const url1 = `http://bookstoreprn-001-site1.itempurl.com/api/requests/${id}`;
+  //const url1 = `https://book0209.azurewebsites.net/api/request/getRequestById?requestId=${id}`;
 
   const getTodo1 = async (url1) => {
     return await fetch(url1);
@@ -384,7 +395,8 @@ async function getRequestUpdate(id) {
   const data1 = await todo1.json();
   console.log("data: ", data1);
 
-  const url2 = `https://book0209.azurewebsites.net/api/category/getCategoryById?CategoryId=${data1.category_Id}`;
+  const url2 = `http://bookstoreprn-001-site1.itempurl.com/api/categories/${data1.category_Id}`;
+  //const url2 = `https://book0209.azurewebsites.net/api/category/getCategoryById?CategoryId=${data1.category_Id}`;
 
   const getTodo2 = async (url2) => {
     return await fetch(url2);
@@ -399,7 +411,9 @@ async function getRequestUpdate(id) {
   document.getElementById("note").value = data1.request_Note;
 
   document.getElementById("updateRequest").addEventListener("click", () => {
-    const url3 = `https://book0209.azurewebsites.net/api/request/updateRequest`;
+   
+    const url3 = ` http://bookstoreprn-001-site1.itempurl.com/api/requests`;
+    //const url3 = `https://book0209.azurewebsites.net/api/request/updateRequest`;
 
     var newQuantity = document.getElementById("quantity").value;
     console.log("newQuantity: ", newQuantity);
@@ -438,7 +452,8 @@ async function updateRequest() {
   const requestId = JSON.parse(data);
   console.log("requestId: ", requestId);
 
-  const url1 = `https://book0209.azurewebsites.net/api/request/getRequestById?requestId=${requestId}`;
+  const url1 = `http://bookstoreprn-001-site1.itempurl.com/api/requests/${requestId}`;
+  //const url1 = `https://book0209.azurewebsites.net/api/request/getRequestById?requestId=${requestId}`;
 
   const getTodo = async (url1) => {
     return await fetch(url1);
@@ -448,7 +463,8 @@ async function updateRequest() {
   const data1 = await todo.json();
   console.log("data: ", data1);
 
-  const url2 = `https://book0209.azurewebsites.net/api/request/updateRequest`;
+  const url2 = `http://bookstoreprn-001-site1.itempurl.com/api/requests`;
+  //const url2 = `https://book0209.azurewebsites.net/api/request/updateRequest`;v
 
   // fetch(url2, {
   //   method: "PUT",

@@ -17,7 +17,8 @@ init();
 
 // Lấy dữ liệu từ API getImportation
 function fetchImportation() {
-  fetch("https://book0209.azurewebsites.net/api/importation/getImportation")
+  fetch("http://bookstoreprn-001-site1.itempurl.com/api/importations")
+  //fetch("https://book0209.azurewebsites.net/api/importation/getImportation")
     .then((response) => response.json())
     .then((importations) => {
       const bgContainer = document.getElementById("bg-container");
@@ -97,7 +98,8 @@ function fetchImportation() {
 
           // Gọi API getByImportId?import_Id với từng importation ID
           fetch(
-            `https://book0209.azurewebsites.net/api/importationDetail/getByImportId?import_Id=${importation.import_Id}`
+            `http://bookstoreprn-001-site1.itempurl.com/api/importation-detail/${importation.import_Id}`
+            //`https://book0209.azurewebsites.net/api/importationDetail/getByImportId?import_Id=${importation.import_Id}`
           )
             .then((response) => response.json())
             .then((details) => {

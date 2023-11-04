@@ -32,7 +32,8 @@ init();
 // Gửi request lấy thông tin sách từ API
 function fetchBookDetails() {
   fetch(
-    `https://book0209.azurewebsites.net/api/book/getBookDetail?bookId=${bookId}`
+    //`https://book0209.azurewebsites.net/api/book/getBookDetail?bookId=${bookId}`
+    `http://bookstoreprn-001-site1.itempurl.com/api/books/${bookId}`
   )
     .then((response) => response.json())
     .then((book) => {
@@ -117,7 +118,8 @@ function updateBook(
   }
 
   // Gửi yêu cầu cập nhật sách lên API
-  fetch(`https://book0209.azurewebsites.net/api/book/updateBook`, {
+  //fetch(`https://book0209.azurewebsites.net/api/book/updateBook`, {
+  fetch(`http://bookstoreprn-001-site1.itempurl.com/api/books`, {
     method: "PUT",
     headers: {
       "Content-Type": "application/json",
@@ -155,7 +157,8 @@ function deleteBook() {
 // Xác nhận xóa sách
 function confirmDelete() {
   fetch(
-    `https://book0209.azurewebsites.net/api/book/deleteBook?bookId=${bookId}`,
+    `http://bookstoreprn-001-site1.itempurl.com/api/books?bookId=${bookId}`,
+    //`https://book0209.azurewebsites.net/api/book/deleteBook?bookId=${bookId}`,
     {
       method: "PATCH",
     }

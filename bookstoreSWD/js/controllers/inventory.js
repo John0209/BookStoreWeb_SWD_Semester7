@@ -16,7 +16,8 @@ function init() {
 init();
 
 function fetchBooks() {
-  fetch("https://book0209.azurewebsites.net/api/inventory/getInventory")
+  fetch("http://bookstoreprn-001-site1.itempurl.com/api/inventories")
+  //fetch("https://book0209.azurewebsites.net/api/inventory/getInventory")
     .then((response) => response.json())
     .then((data) => {
       const tableBody = document.getElementById("book-table-body");
@@ -100,7 +101,8 @@ function deleteBook(inventory_Id) {
 
 function confirmDelete(inventory_Id) {
   fetch(
-    `https://book0209.azurewebsites.net/api/inventory/deleteInventory?inventoryId=${inventory_Id}`,
+    //`https://book0209.azurewebsites.net/api/inventory/deleteInventory?inventoryId=${inventory_Id}`, chưa dc
+    `http://bookstoreprn-001-site1.itempurl.com/api/inventories?inventoryId=${inventory_Id}`,
     {
       method: "PATCH",
     }
@@ -133,7 +135,8 @@ function searchBooks() {
   const searchQuery = searchInput.value;
 
   fetch(
-    `https://book0209.azurewebsites.net/api/inventory/searchInventory?bookName=${searchQuery}`
+    //`https://book0209.azurewebsites.net/api/inventory/searchInventory?bookName=${searchQuery}`
+    `http://bookstoreprn-001-site1.itempurl.com/api/inventories/${searchQuery}`
   )
     .then((response) => response.json())
     .then((data) => {

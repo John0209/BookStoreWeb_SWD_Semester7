@@ -9,7 +9,8 @@ const urlParams = new URLSearchParams(window.location.search);
 const bookId = urlParams.get("bookId");
 function getImagesByBookId(bookId) {
   return fetch(
-    `https://book0209.azurewebsites.net/api/image/getImage?bookId=${bookId}`
+    `http://bookstoreprn-001-site1.itempurl.com/api/images/${bookId}`
+    //`https://book0209.azurewebsites.net/api/image/getImage?bookId=${bookId}`
   )
     .then((response) => response.json())
     .then((imageData) => imageData)
@@ -25,7 +26,8 @@ async function bookDetail() {
   try {
     const [productData, images] = await Promise.all([
       fetch(
-        `https://book0209.azurewebsites.net/api/book/getBookDetail?bookId=${bookId}`
+        `http://bookstoreprn-001-site1.itempurl.com/api/books/${bookId}`
+        //`https://book0209.azurewebsites.net/api/book/getBookDetail?bookId=${bookId}`
       ).then((response) => response.json()),
       getImagesByBookId(bookId),
     ]);
@@ -117,7 +119,8 @@ function addToInventory() {
     inventory_Note: note,
   };
 
-  fetch("https://book0209.azurewebsites.net/api/inventory/addInventory", {
+  //fetch("https://book0209.azurewebsites.net/api/inventory/addInventory", {
+  fetch("http://bookstoreprn-001-site1.itempurl.com/api/inventories", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
