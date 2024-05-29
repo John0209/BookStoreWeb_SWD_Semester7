@@ -1,4 +1,9 @@
-# BookStore
+# BookStore Description
+<h2>The project include 3 roles</h2>
+<h4>Customer role:</h4> Customer functions include view books, search books, payment, view orders and edit account
+<h4>Staff role:</h4> Staff functions include view orders, add book to inventory, entering books importation and view request
+<h4>Admin role:</h4> Admin functions include manages orders, importation, inventory, users and send a book request for staff
+
 1. Backend: Folder BookStoreAPI Tôi đã deploy API lên web với đuờng link là:
 https://book0209.azurewebsites.net/index.html.
 
